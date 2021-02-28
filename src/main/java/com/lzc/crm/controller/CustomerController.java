@@ -138,7 +138,7 @@ public class CustomerController extends BaseController {
     }
 
     /**
-     * 查询客户构成 （折线图数据处理）
+     * 查询客户构成 （柱状图数据处理）
      *
      * @return
      */

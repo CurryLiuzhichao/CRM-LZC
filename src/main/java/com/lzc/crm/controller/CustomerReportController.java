@@ -27,6 +27,7 @@ public class CustomerReportController extends BaseController {
                 return "report/customer_make";
             } else if (type == 2) {
                 // 客户服务分析
+                return "report/customer_make2";
             } else if (type == 3) {
                 // 客户流失分析
                 return "report/customer_loss";

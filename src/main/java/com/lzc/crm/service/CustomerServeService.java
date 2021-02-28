@@ -16,9 +16,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class CustomerServeService extends BaseService<CustomerService,Integer> {
@@ -170,4 +168,71 @@ public class CustomerServeService extends BaseService<CustomerService,Integer> {
         AssertUtil.isTrue(customerServeMapper.updateByPrimaryKeySelective(customerServe)< 1, "服务更新失败！");
     }
 
+    /**
+     * 客户服务分析（柱状图数据处理）
+     *
+     * @return
+     */
+    public Map<String, Object> countCustomerServeMake() {
+        Map<String, Object> map = new HashMap<>();
+        // 查询客户构成数据的列表
+        List<Map<String,Object>> dataList = customerServeMapper.countCustomerServeMake();
+        // 折线图X轴数据  数组
+        List<String> data1 = new ArrayList<>();
+        // 折线图Y轴数据  数组
+        List<Integer> data2 = new ArrayList<>();
+
+        // 判断数据列表 循环设置数据
+        if (dataList != null && dataList.size() > 0) {
+            // 遍历集合
+            dataList.forEach(m -> {
+                // 获取"level"对应的数据，设置到X轴的集合中
+                data1.add(m.get("data_dic_value").toString());
+                // 获取"total"对应的数据，设置到Y轴的集合中
+                data2.add(Integer.parseInt(m.get("total").toString()));
+            });
+        }
+
+        // 将X轴的数据集合与Y轴的数据集合，设置到map中
+        map.put("data1",data1);
+        map.put("data2",data2);
+
+        return map;
+
+    }
+
+    /**
+     * 客户服务分析（饼状图数据处理）
+     *
+     * @return
+     */
+    public Map<String, Object> countCustomerServeMake02() {
+        Map<String, Object> map = new HashMap<>();
+        // 查询客户构成数据的列表
+        List<Map<String,Object>> dataList = customerServeMapper.countCustomerServeMake();
+        // 饼状图数据   数组（数组中是字符串）
+        List<String> data1 = new ArrayList<>();
+        // 饼状图的数据  数组（数组中是对象）
+        List<Map<String, Object>> data2 = new ArrayList<>();
+
+        // 判断数据列表 循环设置数据
+        if (dataList != null && dataList.size() > 0) {
+            // 遍历集合
+            dataList.forEach(m -> {
+                // 饼状图数据   数组（数组中是字符串）
+                data1.add(m.get("data_dic_value").toString());
+                // 饼状图的数据  数组（数组中是对象）
+                Map<String,Object> dataMap = new HashMap<>();
+                dataMap.put("name", m.get("data_dic_value"));
+                dataMap.put("value", m.get("total"));
+                data2.add(dataMap);
+            });
+        }
+
+        // 将X轴的数据集合与Y轴的数据集合，设置到map中
+        map.put("data1",data1);
+        map.put("data2",data2);
+
+        return map;
+    }
 }
