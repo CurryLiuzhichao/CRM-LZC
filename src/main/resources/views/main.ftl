@@ -11,7 +11,7 @@
         <div class="layui-logo">
             <a href="">
                 <img src="images/logo.png" alt="logo">
-                <h1>CRM-LZC</h1>
+                <h1>CRM-智能办公</h1>
             </a>
         </div>
         <a>
@@ -177,7 +177,8 @@
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd"
                                            data-tab-mpi="m-p-i-10"
-                                           data-tab="report/2" target="_self"><i class="fa fa-tachometer"></i><span
+                                           data-tab="sale_chance/index" target="_self"><i
+                                                    class="fa fa-tachometer"></i><span
                                                     class="layui-left-nav"> 客户服务分析</span></a>
                                     </dd>
                                 </#if>

@@ -173,27 +173,4 @@ public class CustomerServeController extends BaseController {
         return "customerServe/customer_serve_feed_back_add";
     }
 
-
-    /**
-     * 客户服务分析（柱状图数据处理）
-     *
-     * @return
-     */
-    @RequestMapping("countCustomerServeMake")
-    @ResponseBody
-    public Map<String, Object> countCustomerServeMake() {
-        return customerServeService.countCustomerServeMake();
-    }
-
-    /**
-     * 客户服务分析（饼状图数据处理）
-     *
-     * @return
-     */
-    @RequestMapping("countCustomerServeMake02")
-    @ResponseBody
-    public Map<String, Object> countCustomerServeMake02() {
-        return customerServeService.countCustomerServeMake02();
-    }
-
 }
