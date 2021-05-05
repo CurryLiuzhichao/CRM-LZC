@@ -47,6 +47,8 @@
       #{devResult,jdbcType=INTEGER}, #{isValid,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
       #{updateDate,jdbcType=TIMESTAMP})
   </insert>
+
+
   <insert id="insertSelective" parameterType="com.lzc.crm.vo.SaleChance">
     insert into t_sale_chance
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -127,6 +129,12 @@
       <if test="createMan != null">
         #{createMan,jdbcType=VARCHAR},
       </if>
+      <if test="assignMan != null">
+        #{assignMan,jdbcType=VARCHAR},
+      </if>
+      <if test="assignTime != null">
+        #{assignTime,jdbcType=TIMESTAMP},
+      </if>
       <if test="state != null">
         #{state,jdbcType=INTEGER},
       </if>
@@ -142,14 +150,9 @@
       <if test="updateDate != null">
         #{updateDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="assignMan != null" >
-        #{assignMan,jdbcType=VARCHAR},
-      </if>
-      <if test="assignTime != null" >
-        #{assignTime,jdbcType=TIMESTAMP},
-      </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.lzc.crm.vo.SaleChance">
     update t_sale_chance
     <set>
