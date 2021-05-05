@@ -16,9 +16,14 @@ spring:
   ## freemarker
   freemarker:
     suffix: .ftl
-    content-type: text/html
+    ##content-type: text/html
     charset: UTF-8
     template-loader-path: classpath:/views/
+    check-template-location: true
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
 
   ## 启用热部署
   devtools:

@@ -260,4 +260,20 @@
     </where>
   </select>
 
+  <!-- 查询客户服务 -->
+  <select id="countCustomerServeMake" resultType="map">
+    SELECT
+      `data_dic_value`,count(1) total
+    FROM
+      t_datadic
+        LEFT JOIN
+      t_customer_serve
+      on
+        t_customer_serve.serve_type=t_datadic.id
+    WHERE
+      t_customer_serve.is_valid = 1
+    GROUP BY
+      `data_dic_value`
+  </select>
+
 </mapper>

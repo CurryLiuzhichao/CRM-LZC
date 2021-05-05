@@ -25,7 +25,7 @@
                 <a href="javascript:;">${(user.userName)!""}</a>
                 <dl class="layui-nav-child">
                     <dd>
-                        <a href="javascript:;" data-iframe-tab="${ctx}/user/toSettingPage" data-title="基本资料"
+                        <a href="javascript:;"  data-iframe-tab="${ctx}/user/toSettingPage" data-title="基本资料"
                            data-icon="fa fa-gears">基本资料</a>
                     </dd>
                     <dd>
@@ -177,7 +177,7 @@
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd"
                                            data-tab-mpi="m-p-i-10"
-                                           data-tab="sale_chance/index" target="_self"><i
+                                           data-tab="report/2" target="_self"><i
                                                     class="fa fa-tachometer"></i><span
                                                     class="layui-left-nav"> 客户服务分析</span></a>
                                     </dd>

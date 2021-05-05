@@ -10,6 +10,7 @@ import com.lzc.crm.service.UserService;
 import com.lzc.crm.utils.LoginUserUtil;
 import com.lzc.crm.vo.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -86,6 +87,8 @@ public class UserController extends BaseController {
         return resultInfo;
     }
 
+
+
     /**
      * 进入修改密码页面
      * @return
@@ -94,6 +97,8 @@ public class UserController extends BaseController {
     public String toPasswordPage(){
         return "user/password";
     }
+
+
 
     /**
      * 查询所有的销售人员

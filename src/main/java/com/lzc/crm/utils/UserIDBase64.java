@@ -5,8 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Base64;
 
 /**
- * 乐字节：专注线上IT培训
- * 答疑老师微信：lezijie
+ * userID解密
  */
 public class UserIDBase64 {
 
@@ -15,8 +14,6 @@ public class UserIDBase64 {
      * userID解密
      *
      *
-     * 乐字节：专注线上IT培训
-     * 答疑老师微信：lezijie
      * @param encodedUserID  加密后的用户id
      * @return java.lang.Integer
      */
@@ -41,8 +38,6 @@ public class UserIDBase64 {
      * 用户id加密
      *
      *
-     * 乐字节：专注线上IT培训
-     * 答疑老师微信：lezijie
      * @param userID 用户id
      * @return java.lang.String
      */

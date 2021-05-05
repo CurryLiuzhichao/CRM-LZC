@@ -7,6 +7,25 @@ layui.use(['element', 'layer', 'layuimini','jquery','jquery_cookie'], function (
     $('#layuiminiHomeTabIframe').html('<iframe width="100%" height="100%" frameborder="0"  src="welcome"></iframe>')
     layuimini.initTab();
 
+    // 打开当前用户的基本信息页面
+    $("#personMessage").click(function (data) {
+        openUserDialog("基本信息", "user/toUpdateCurrentPage");
+    });
+    function openUserDialog(title, url) {
+        title = "<h2>" + title + "</h2>";
+        layui.layer.open({
+            type: 2,
+            title: title,
+            shadeClose: true,
+            shade: 0.6,
+            area: ['480px', '390px'],
+            content: url,
+            // 最大化最小化
+            maxmin: true,
+            // 不允许窗口拉伸
+            resize: false
+        });
+    }
 
     /**
      * 用户退出

@@ -47,44 +47,44 @@
             <label class="layui-form-label">客户级别</label>
             <div class="layui-input-block">
                 <select name="level"  id="level">
-                    <#if (customer.level) == "合作伙伴" >
-                        <option value="" >请选择</option>
-                        <option value="普通客户">普通客户</option>
-                        <option value="重点开发客户" >重点开发客户</option>
-                        <option value="大客户" >大客户</option>
-                        <option value="合作伙伴" selected>合作伙伴</option>
-                    <#elseif (customer.level) == "大客户">
-                        <option value="" >请选择</option>
-                        <option value="普通客户">普通客户</option>
-                        <option value="重点开发客户" >重点开发客户</option>
-                        <option value="大客户" selected>大客户</option>
-                        <option value="合作伙伴" >合作伙伴</option>
-                    <#elseif (customer.level) == "重点开发客户">
-                        option value="" >请选择</option>
-                        <option value="普通客户">普通客户</option>
-                        <option value="重点开发客户" selected>重点开发客户</option>
-                        <option value="大客户" >大客户</option>
-                        <option value="合作伙伴" >合作伙伴</option>
-                    <#elseif (customer.level) == "普通客户">
-                        option value="" >请选择</option>
-                        <option value="普通客户" selected>普通客户</option>
-                        <option value="重点开发客户" >重点开发客户</option>
-                        <option value="大客户" >大客户</option>
-                        <option value="合作伙伴" >合作伙伴</option>
-                    <#elseif (customer.level) == "">
-                        <option value="" >请选择</option>
-                        <option value="普通客户">普通客户</option>
-                        <option value="重点开发客户" >重点开发客户</option>
-                        <option value="大客户" >大客户</option>
-                        <option value="合作伙伴" >合作伙伴</option>
-                    </#if>
+<#--                    <#if (customer.level) == "战略合作伙伴" >-->
+<#--                        <option value="" >请选择</option>-->
+<#--                        <option value="普通客户">普通客户</option>-->
+<#--                        <option value="重点开发客户" >重点开发客户</option>-->
+<#--                        <option value="大客户" >大客户</option>-->
+<#--                        <option value="战略合作伙伴" selected>战略合作伙伴</option>-->
+<#--                    <#elseif (customer.level) == "大客户">-->
+<#--                        <option value="" >请选择</option>-->
+<#--                        <option value="普通客户">普通客户</option>-->
+<#--                        <option value="重点开发客户" >重点开发客户</option>-->
+<#--                        <option value="大客户" selected>大客户</option>-->
+<#--                        <option value="战略合作伙伴" >战略合作伙伴</option>-->
+<#--                    <#elseif (customer.level) == "重点开发客户">-->
+<#--                        option value="" >请选择</option>-->
+<#--                        <option value="普通客户">普通客户</option>-->
+<#--                        <option value="重点开发客户" selected>重点开发客户</option>-->
+<#--                        <option value="大客户" >大客户</option>-->
+<#--                        <option value="战略合作伙伴" >战略合作伙伴</option>-->
+<#--                    <#elseif (customer.level) == "普通客户">-->
+<#--                        option value="" >请选择</option>-->
+<#--                        <option value="普通客户" selected>普通客户</option>-->
+<#--                        <option value="重点开发客户" >重点开发客户</option>-->
+<#--                        <option value="大客户" >大客户</option>-->
+<#--                        <option value="战略合作伙伴" >战略合作伙伴</option>-->
+<#--                    <#else>-->
+<#--                        <option value="">请选择</option>-->
+<#--                        <option value="普通客户">普通客户</option>-->
+<#--                        <option value="重点开发客户" >重点开发客户</option>-->
+<#--                        <option value="大客户" >大客户</option>-->
+<#--                        <option value="战略合作伙伴" >战略合作伙伴</option>-->
+<#--                    </#if>-->
 
-<#--                    <option value="${(customer.level)!}">${(customer.level)!}</option>-->
-<#--                    <option value="" >请选择</option>-->
-<#--                    <option value="普通客户">普通客户</option>-->
-<#--                    <option value="重点开发客户" >重点开发客户</option>-->
-<#--                    <option value="大客户" >大客户</option>-->
-<#--                    <option value="合作伙伴" >合作伙伴</option>-->
+                    <option value="${(customer.level)!}">${(customer.level)!}</option>
+                    <option value="" >请选择</option>
+                    <option value="普通客户">普通客户</option>
+                    <option value="重点开发客户" >重点开发客户</option>
+                    <option value="大客户" >大客户</option>
+                    <option value="合作伙伴" >合作伙伴</option>
                 </select>
             </div>
         </div>
